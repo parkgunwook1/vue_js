@@ -6,6 +6,7 @@ import ProductCreate from '../views/ProductCreate.vue'
 import ProductUpdate from '../views/ProductUpdate.vue'
 import SalesList from '../views/SalesList.vue'
 import ImageInsert from '../views/ImageInsert.vue'
+import ProductOrder from '../views/ProductOrder.vue'
 
 const routes = [
   {
@@ -17,6 +18,11 @@ const routes = [
     path: '/detail',
     name: 'ProductDetail',
     component: ProductDetail
+  },
+  {
+  path: '/order',
+    name: 'ProductOrder',
+    component: ProductOrder
   },
   {
     path: '/create',

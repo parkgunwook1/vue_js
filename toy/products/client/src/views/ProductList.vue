@@ -24,8 +24,6 @@
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group" role="group">
-                  <button @click="goTOCart(product_id);" style="cursor:pointer" type="button" class="btn btn-sm btn-outline-secondary">장바구니 담기</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">주문하기</button>
                 </div>
                 <small class="text-dark">{{product.product_price}}원</small>
               </div>
@@ -36,12 +34,11 @@
     </div>
   </main>
 </template>
-
 <script>
 export default {
   data() {
     return {
-      productList: []
+      productList: [],
     };
   },
   created() {
@@ -54,9 +51,6 @@ export default {
     },
     goToDetail(product_id) {
      this.$router.push({path:'/detail', query:{product_id:product_id}}); 
-    },
-    goTOCart(product_id) {
-      this.$router.push({path:'/cart', query:{product_id}});
     }
   }
 }

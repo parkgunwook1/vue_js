@@ -112,8 +112,8 @@ export default {
     async login(kakao_account) {
       await this.$api("/api/login", {
         param: [
-          {email:kakao_account.email, nickname:kakao_account.profile_nickname},
-          {nickname:kakao_account.profile_nickname}
+          {email:kakao_account.email, nickname:kakao_account.profile.nickname},
+          {nickname:kakao_account.profile.nickname}
         ]
       });
       this.$store.commit("user", kakao_account);

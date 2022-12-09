@@ -61,12 +61,8 @@
               </div>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="col-6 d-grid p-1">
-                  <button @click="goTOCart(product_id);" style="cursor:pointer" type="button" class="btn btn-lg btn-dark">장바구니 담기</button>
+                  <button @click="goTOCart(productId);" style="cursor:pointer" type="button" class="btn btn-lg btn-dark">장바구니 담기</button>
                 </div>
-                <div class="col-6 d-grid p-1">
-                  <button type="button" class="btn btn-lg btn-danger">주문하기</button>
-                </div>
-                
               </div>
             </div>
           </div>
@@ -120,7 +116,7 @@ export default {
       console.log('this.productImage',this.productImage)
     },
     goTOCart(product_id) {
-      this.$router.push({path:'/cart', query:{product_id}});
+      this.$router.push({path:'/cart', query:{product_id:product_id}});
     }
   }
 }
